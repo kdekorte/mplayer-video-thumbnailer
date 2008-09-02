@@ -1,0 +1,29 @@
+Development
+    Add video/x-msvideo as supported mimetype
+0.4.2
+    Make sure file is still not being written to before we open it
+0.4.1
+    Cleanup and bump timeout to 15 seconds.
+    Change make length value to 360
+    Up the time out from 2 to 5 seconds
+    Don't use -forceidx in identify stage, may take to long.
+    Fix seg fault when id_length is null
+    Run the identify stage in a 2 second timeout as well
+    Try at 5% in, then every 5% up until 50% to generate a thumbnail
+    Run mplayer in background process and kill it if longer than two seconds
+    Change mplayer image builder back to using jpeg for intermediate format
+0.4.0
+    Use PNM as intermediate format
+    Default to png if no format can be determined
+    Change scaling method to let mplayer do output, scale it, border it and then rescale.
+	Old method was make mplayer scale it, border it and then rescale, may fix some video file issues
+    Try 10 times to make a thumbnail, may solve the problem where the file says it is longer than it is
+0.3
+    Set size to 128 if size specified on the command line is invalid
+    Fix build and packaging issues
+    Update schema file for dealing with files with spaces
+    Fixed bug where trying to output the frames at the end of the file.
+    Added verbose output option
+0.2
+    Auto RPM building
+    
