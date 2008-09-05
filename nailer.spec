@@ -1,4 +1,4 @@
-%define ver 0.4.3
+%define ver 0.4.4
 
 Name: nailer
 Summary: Thumbnail Generator that uses mplayer

@@ -88,7 +88,12 @@ int main(gint argc, gchar * argv[])
         g_error_free(error);
         error = NULL;
     }
-    
+   
+    if (argc < 3) {
+	g_printf("%s",g_option_context_get_help(context,TRUE,NULL));
+	return(1);
+    }
+ 
     if (!g_file_test(argv[1], G_FILE_TEST_EXISTS)) {
     	g_printf("File not found\n");
     	return(1);

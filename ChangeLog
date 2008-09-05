@@ -1,5 +1,7 @@
 Development
+    Show help text when not enough arguments
     Add video/x-msvideo as supported mimetype
+0.4.3
 0.4.2
     Make sure file is still not being written to before we open it
 0.4.1

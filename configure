@@ -2268,7 +2268,7 @@ fi
 
 # Define the identity of the package.
  PACKAGE=nailer
- VERSION=0.4.3
+ VERSION=0.4.4
 
 
 cat >>confdefs.h <<_ACEOF
