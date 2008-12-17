@@ -1,4 +1,6 @@
 Development
+    Switch from tempnam to gmp_tempname
+    Support dirac videos for thumbnailing
     Show help text when not enough arguments
     Add video/x-msvideo as supported mimetype
 0.4.3

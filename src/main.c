@@ -40,6 +40,7 @@ static GOptionEntry entries[] = {
     {"verbose", 'v', 0, G_OPTION_ARG_NONE, &verbose, "Show more ouput on the console", NULL},
     {NULL}
 };
+gchar *gmp_tempname(gchar * path, const gchar * name_template);
 
 int main(gint argc, gchar * argv[])
 {
@@ -196,7 +197,7 @@ int main(gint argc, gchar * argv[])
             return (1);
         }
 
-        dirname = g_strdup_printf("%s", tempnam("/tmp", "nailerXXXXXX"));
+        dirname = g_strdup_printf("%s", gmp_tempname(NULL, "nailerXXXXXX"));
         filename = g_strdup_printf("%s/00000003.jpg", dirname);
 
         // run mplayer and try to get the first frame and convert it to a jpeg
@@ -434,3 +435,32 @@ int main(gint argc, gchar * argv[])
     }
 
 }
+
+gchar *gmp_tempname(gchar * path, const gchar * name_template)
+{
+    gchar *result;
+    gchar *replace;
+    gchar *basename;
+    gchar *localpath;
+
+    basename = g_strdup(name_template);
+
+    if (path == NULL && g_getenv("TMPDIR") == NULL) {
+        localpath = g_strdup("/tmp");
+    } else if (path == NULL && g_getenv("TMPDIR") != NULL) {
+        localpath = g_strdup(g_getenv("TMPDIR"));
+    } else {
+        localpath = g_strdup(path);
+    }
+
+    while ((replace = g_strrstr(basename, "X"))) {
+        replace[0] = (gchar) g_random_int_range((gint) 'a', (gint) 'z');
+    }
+
+    result = g_strdup_printf("%s/%s", localpath, basename);
+    g_free(basename);
+    g_free(localpath);
+
+    return result;
+}
+
