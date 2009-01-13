@@ -750,6 +750,32 @@
 
 
         <schema>
+            <key>/schemas/desktop/gnome/thumbnailers/video@x-flv/enable</key>
+            <applyto>/desktop/gnome/thumbnailers/video@x-flv/enable</applyto>
+            <owner>nailer</owner>
+            <type>bool</type>
+            <default>true</default>
+            <locale name="C">
+                <short></short>
+                <long></long>
+            </locale>
+        </schema>
+
+
+        <schema>
+            <key>/schemas/desktop/gnome/thumbnailers/video@x-flv/command</key>
+            <applyto>/desktop/gnome/thumbnailers/video@x-flv/command</applyto>
+            <owner>nailer</owner>
+            <type>string</type>
+            <default>@prefix@/bin/nailer %i %o %s</default>
+            <locale name="C">
+                <short></short>
+                <long></long>
+            </locale>
+        </schema>
+
+
+        <schema>
             <key>/schemas/desktop/gnome/thumbnailers/video@fli/enable</key>
             <applyto>/desktop/gnome/thumbnailers/video@fli/enable</applyto>
             <owner>nailer</owner>
