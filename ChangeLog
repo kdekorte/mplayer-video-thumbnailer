@@ -1,4 +1,5 @@
 Development
+    Fix invalid gconf keys
     Switch from tempnam to gmp_tempname
     Support dirac videos for thumbnailing
     Show help text when not enough arguments
