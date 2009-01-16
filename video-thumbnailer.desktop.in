@@ -3,5 +3,5 @@ Version=1.0
 Encoding=UTF-8
 Type=X-Thumbnailer
 Name=VIDEO Thumbnailer
-MimeType=video/x-ms-wmv;video/mpeg;video/x-msvideo;video/quicktime;video/x-ms-asf;application/vnd.rn-realmedia;application/x-flash-video
+MimeType=video/x-ms-wmv;video/mpeg;video/x-msvideo;video/quicktime;video/x-ms-asf;application/vnd.rn-realmedia;application/x-flash-video;
 X-Thumbnailer-Exec=@prefix@/bin/nailer %i %o 128
