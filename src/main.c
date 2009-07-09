@@ -141,6 +141,8 @@ int main(gint argc, gchar * argv[])
         av3[ac3++] = g_strdup_printf("null");
         av3[ac3++] = g_strdup_printf("-frames");
         av3[ac3++] = g_strdup_printf("0");
+        av3[ac3++] = g_strdup_printf("-nocache");
+        av3[ac3++] = g_strdup_printf("-noidle");
         av3[ac3++] = g_strdup_printf("%s", argv[1]);
         av3[ac3] = NULL;
 
@@ -213,6 +215,8 @@ int main(gint argc, gchar * argv[])
             av2[ac2++] = g_strdup_printf("%i", startsecond);
             av2[ac2++] = g_strdup_printf("-frames");
             av2[ac2++] = g_strdup_printf("3");
+            av2[ac2++] = g_strdup_printf("-nocache");
+            av2[ac2++] = g_strdup_printf("-noidle");
             av2[ac2++] = g_strdup_printf("%s", argv[1]);
             av2[ac2] = NULL;
 
