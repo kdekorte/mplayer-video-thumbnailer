@@ -1,4 +1,5 @@
 Development
+    Allow setting of --with-gconf-schema-file-dir
     Make nailer work with webm files
     Make nailer work when idle=yes is in .mplayer/config
     Fix invalid gconf keys
