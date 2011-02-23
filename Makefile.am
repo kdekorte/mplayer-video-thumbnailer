@@ -25,8 +25,8 @@ endif
 EXTRA_DIST = $(nailerdoc_DATA) $(schemas_DATA) $(thunar_DATA) nailer.schemas.in video-thumbnailer.desktop.in nailer.spec.in
 
 
-install-schemas: $(schema_DATA)
-	GCONF_CONFIG_SOURCE=`gconftool-2 --get-default-source` gconftool-2 --makefile-install-rule $(schema_DATA)
+install-schemas: $(schemas_DATA)
+	GCONF_CONFIG_SOURCE=`gconftool-2 --get-default-source` gconftool-2 --makefile-install-rule $(schemas_DATA)
 
 if GCONF_SCHEMAS_INSTALL
 install-data-hook: install-schemas

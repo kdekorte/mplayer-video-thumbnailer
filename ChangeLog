@@ -1,4 +1,6 @@
 Development
+    Fix Issue #5 with supplied patch
+    Update autoconf files
     Allow setting of --with-gconf-schema-file-dir
     Make nailer work with webm files
     Make nailer work when idle=yes is in .mplayer/config
