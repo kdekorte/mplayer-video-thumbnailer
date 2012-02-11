@@ -26,7 +26,6 @@
 
 #include <glib.h>
 #include <glib/gstdio.h>
-#include <glib/gstrfuncs.h>
 #include <gdk-pixbuf/gdk-pixbuf.h>
 #include <string.h>
 #include "left.h"

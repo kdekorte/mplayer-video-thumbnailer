@@ -1,4 +1,5 @@
 Development
+    Remove #include <glib/gstrfuncs.h> from main.c, Issue #6
     Fix Issue #5 with supplied patch
     Update autoconf files
     Allow setting of --with-gconf-schema-file-dir
