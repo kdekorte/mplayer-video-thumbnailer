@@ -14,7 +14,7 @@ nailerdoc_DATA = \
 
 thunardir = ${prefix}/share/thumbnailers
 thunar_in_files = video-thumbnailer.desktop.in
-thunar_DATA = video-thumbnailer.desktop
+thunar_DATA = video-thumbnailer.desktop nailer.thumbnailer
 
 if GCONF_SCHEMAS_INSTALL
 schemasdir =  @GCONF_SCHEMA_FILE_DIR@
