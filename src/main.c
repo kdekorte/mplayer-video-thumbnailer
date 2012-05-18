@@ -98,14 +98,14 @@ int main(gint argc, gchar * argv[])
         return (1);
     }
 
-    if (!g_file_test(argv[1], G_FILE_TEST_EXISTS)) {
+    if (!g_file_test(g_filename_from_uri(argv[1],NULL,NULL), G_FILE_TEST_EXISTS)) {
         g_printf("File not found\n");
         return (1);
     }
 
     av1[ac1++] = g_strdup_printf("file");
     av1[ac1++] = g_strdup_printf("--brief");
-    av1[ac1++] = g_strdup_printf("%s", argv[1]);
+    av1[ac1++] = g_strdup_printf("%s", g_filename_from_uri(argv[1],NULL,NULL));
     av1[ac1] = NULL;
 
 
@@ -142,7 +142,7 @@ int main(gint argc, gchar * argv[])
         av3[ac3++] = g_strdup_printf("0");
         av3[ac3++] = g_strdup_printf("-nocache");
         av3[ac3++] = g_strdup_printf("-noidle");
-        av3[ac3++] = g_strdup_printf("%s", argv[1]);
+        av3[ac3++] = g_strdup_printf("%s", g_filename_from_uri(argv[1],NULL,NULL));
         av3[ac3] = NULL;
 
         if (verbose) {
@@ -216,7 +216,7 @@ int main(gint argc, gchar * argv[])
             av2[ac2++] = g_strdup_printf("3");
             av2[ac2++] = g_strdup_printf("-nocache");
             av2[ac2++] = g_strdup_printf("-noidle");
-            av2[ac2++] = g_strdup_printf("%s", argv[1]);
+            av2[ac2++] = g_strdup_printf("%s", g_filename_from_uri(argv[1],NULL,NULL));
             av2[ac2] = NULL;
 
             if (verbose) {

@@ -1,4 +1,5 @@
 Development
+    Change from file parameter to uri parameter
     Add in .thumbnailer file for gnome3
     Remove #include <glib/gstrfuncs.h> from main.c, Issue #6
     Fix Issue #5 with supplied patch
