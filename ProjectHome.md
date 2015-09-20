@@ -1,0 +1,1 @@
+nailer is a video thumbnail generator that uses the mplayer application
